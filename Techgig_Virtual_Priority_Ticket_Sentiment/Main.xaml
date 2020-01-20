@@ -653,7 +653,7 @@
                                           <InArgument x:TypeArguments="x:String" x:Key="in_TicketNumber">[TicketNumber]</InArgument>
                                           <InArgument x:TypeArguments="x:String" x:Key="in_Consumer_Name">[senderName]</InArgument>
                                           <InArgument x:TypeArguments="x:String" x:Key="in_mailSubject">[mailSubject]</InArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="in_ExchangeServer">https://mail.nhs.net/ews/exchange.asmx/</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_ExchangeServer">[Config("Mail_URL").ToString]</InArgument>
                                           <InArgument x:TypeArguments="x:String" x:Key="in_Requestor_Mail">[row.Item("Mail").ToString]</InArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
                                       </ui:InvokeWorkflowFile>
