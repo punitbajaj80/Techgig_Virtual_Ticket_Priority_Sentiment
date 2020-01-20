@@ -1,0 +1,40 @@
+{
+  "name": "Techgig_Virtual_Priority_Ticket_Sentiment",
+  "description": "Based on the email received by the customer, using NLP understand the sentiment of the customer and raise a correct priority ticket in the system.",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.Cognitive.Activities": "[2.2.4]",
+    "UiPath.Credentials.Activities": "[1.1.6479.13204]",
+    "UiPath.Excel.Activities": "[2.7.2]",
+    "UiPath.Mail.Activities": "[1.7.2]",
+    "UiPath.Salesforce.Activities": "[1.2.1]",
+    "UiPath.System.Activities": "[19.10.1]",
+    "UiPath.UIAutomation.Activities": "[19.11.0]",
+    "UiPathTeam.Salesforce.ExtensionPackage.Activities": "[1.0.0.805]"
+  },
+  "webServices": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "19.10.2.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "fileInfos": []
+  },
+  "expressionLanguage": "VisualBasic"
+}

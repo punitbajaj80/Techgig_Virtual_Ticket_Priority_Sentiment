@@ -1,0 +1,205 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="574,1171" sap2010:WorkflowViewState.IdRef="Sequence_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usa="clr-namespace:UiPath.Salesforce.Activities;assembly=UiPath.Salesforce.Activities" xmlns:usc="clr-namespace:UiPath.Salesforce.ConnectionService;assembly=UiPath.Salesforce" xmlns:use="clr-namespace:UiPathTeam.Salesforce.ExtensionPackage;assembly=UiPathTeam.Salesforce.Activities.ExtensionPackage" xmlns:usm="clr-namespace:UiPath.Salesforce.Models;assembly=UiPath.Salesforce" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="50">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Salesforce.Activities.Models</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Salesforce.ConnectionService</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Salesforce.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Salesforce</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="554,1111" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="Welcome1234@" Name="Password" />
+      <Variable x:TypeArguments="x:String" Default="507437B1D21620206A1A1014A660D02999A78A56E6893A706CEB8B4539870763" Name="Customer_Secret" />
+      <Variable x:TypeArguments="x:String" Default="6Cel800D2w000002ATl78882w000001A4lNoPZdqi0dxxf6uyQlc0aWpdzhvaIy9CL2slLQFmR7LKCAzNUnMLyDp6ZxmKbqLWYgenVsBenF" Name="Sec_Token" />
+      <Variable x:TypeArguments="x:String" Default="3MVG9n_HvETGhr3DxpMri4kpRPz0yqxEhp_t9sYuClI8RNIOLaX4zXUhGqHmfCwhviDUsV4ya3athn7mCxpoW" Name="Customer_Key" />
+      <Variable x:TypeArguments="x:String" Default="siddhartha.bhosle-najt1@force.com" Name="User_ID" />
+      <Variable x:TypeArguments="x:String" Name="CaseID" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DATARESULT" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <use:Salesforce_Application_Scope ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ExistingAuth="{x:Null}" ExistingService="{x:Null}" Host="{x:Null}" Password="{x:Null}" Port="{x:Null}" ProxyPass="{x:Null}" ProxyUser="{x:Null}" ResponseAuth="{x:Null}" ResponseService="{x:Null}" SecurityToken="{x:Null}" SecurityTokenProd="{x:Null}" UserName="{x:Null}" ValidConnection="{x:Null}" Connection_Status="Close_at_scope_end" ConsumerKeyProd="[Customer_Key]" ConsumerSecretProd="[New System.Net.NetworkCredential(string.Empty, Customer_Secret).SecurePassword]" DisplayName="Salesforce Application Scope" EnvironmentType="Production" sap:VirtualizedContainerService.HintSize="512,584" sap2010:WorkflowViewState.IdRef="Salesforce_Application_Scope_1" InvalidCommand="Yes" PasswordProd="[New System.Net.NetworkCredential(string.Empty, Password).SecurePassword]" ServerType="Production" UserNameProd="[User_ID]">
+      <use:Salesforce_Application_Scope.Body>
+        <ActivityAction x:TypeArguments="use:SalesForceProperty">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="use:SalesForceProperty" Name="SalesForceScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,474" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <use:Get_Contact_List DataResult="{x:Null}" Response="{x:Null}" Result="{x:Null}" ValidConnection="{x:Null}" DisplayName="Get Contact List" sap:VirtualizedContainerService.HintSize="334,57" sap2010:WorkflowViewState.IdRef="Get_Contact_List_1" InvalidCommand="No" Search="SELECT Id FROM Contact WHERE Email='Sidd' LIMIT 100" />
+            <use:Add_Case Response="{x:Null}" Result="{x:Null}" ValidConnection="{x:Null}" CaseID="[CaseID]" DisplayName="Add Case" sap:VirtualizedContainerService.HintSize="334,57" sap2010:WorkflowViewState.IdRef="Add_Case_1" InvalidCommand="No" SForceAutoAssign="True_Default" cmdTYPE="AddCase">
+              <use:Add_Case.Parameters>
+                <scg:List x:TypeArguments="use:ParametersArgument" Capacity="8">
+                  <use:ParametersArgument>
+                    <use:ParametersArgument.Parameter>
+                      <InArgument x:TypeArguments="x:String">Status</InArgument>
+                    </use:ParametersArgument.Parameter>
+                    <use:ParametersArgument.ValueData>
+                      <InArgument x:TypeArguments="x:String">New</InArgument>
+                    </use:ParametersArgument.ValueData>
+                  </use:ParametersArgument>
+                  <use:ParametersArgument>
+                    <use:ParametersArgument.Parameter>
+                      <InArgument x:TypeArguments="x:String">Origin</InArgument>
+                    </use:ParametersArgument.Parameter>
+                    <use:ParametersArgument.ValueData>
+                      <InArgument x:TypeArguments="x:String">Mail</InArgument>
+                    </use:ParametersArgument.ValueData>
+                  </use:ParametersArgument>
+                  <use:ParametersArgument>
+                    <use:ParametersArgument.Parameter>
+                      <InArgument x:TypeArguments="x:String">ContactId</InArgument>
+                    </use:ParametersArgument.Parameter>
+                    <use:ParametersArgument.ValueData>
+                      <InArgument x:TypeArguments="x:String">0032w000002KSiDAAW</InArgument>
+                    </use:ParametersArgument.ValueData>
+                  </use:ParametersArgument>
+                  <use:ParametersArgument>
+                    <use:ParametersArgument.Parameter>
+                      <InArgument x:TypeArguments="x:String">Priority</InArgument>
+                    </use:ParametersArgument.Parameter>
+                    <use:ParametersArgument.ValueData>
+                      <InArgument x:TypeArguments="x:String">HIGH</InArgument>
+                    </use:ParametersArgument.ValueData>
+                  </use:ParametersArgument>
+                  <use:ParametersArgument>
+                    <use:ParametersArgument.Parameter>
+                      <InArgument x:TypeArguments="x:String">Subject</InArgument>
+                    </use:ParametersArgument.Parameter>
+                    <use:ParametersArgument.ValueData>
+                      <InArgument x:TypeArguments="x:String">
+                        <Literal x:TypeArguments="x:String" Value="" />
+                      </InArgument>
+                    </use:ParametersArgument.ValueData>
+                  </use:ParametersArgument>
+                  <use:ParametersArgument>
+                    <use:ParametersArgument.Parameter>
+                      <InArgument x:TypeArguments="x:String">Description</InArgument>
+                    </use:ParametersArgument.Parameter>
+                    <use:ParametersArgument.ValueData>
+                      <InArgument x:TypeArguments="x:String">
+                        <Literal x:TypeArguments="x:String" Value="" />
+                      </InArgument>
+                    </use:ParametersArgument.ValueData>
+                  </use:ParametersArgument>
+                </scg:List>
+              </use:Add_Case.Parameters>
+            </use:Add_Case>
+            <use:Get_Case_List Response="{x:Null}" Result="{x:Null}" ValidConnection="{x:Null}" DataResult="[DATARESULT]" DisplayName="Get Case List" sap:VirtualizedContainerService.HintSize="334,57" sap2010:WorkflowViewState.IdRef="Get_Case_List_2" InvalidCommand="No" Search="SELECT CaseNumber FROM Case Where id=CaseId" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Ticket Raised&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </use:Salesforce_Application_Scope.Body>
+    </use:Salesforce_Application_Scope>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,395" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="476,317" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <usa:SalesforceApplicationScope ExistingConnectionService="{x:Null}" SalesforceConnection="{x:Null}" SecurityToken="{x:Null}" ConsumerKey="[Customer_Key]" ConsumerSecret="[New System.Net.NetworkCredential(string.Empty, Customer_Secret).SecurePassword]" DisplayName="Salesforce Application Scope" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="SalesforceApplicationScope_1" Password="[New System.Net.NetworkCredential(string.Empty, Password).SecurePassword]" ServerType="Live" UseStrongDataTyping="False" Username="[User_ID]">
+            <usa:SalesforceApplicationScope.Body>
+              <ActivityAction x:TypeArguments="usc:IConnectionService">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="usc:IConnectionService" Name="SalesforceConnection" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="Result" />
+                    <Variable x:TypeArguments="x:Int32" Name="Result_Status_Code" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <usa:LightningRestApiRequest Body="{x:Null}" BodyFormat="{x:Null}" ResultPath="{x:Null}" SalesforceStatus="{x:Null}" AcceptFormat="ANY" DisplayName="Lightning REST API Request" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LightningRestApiRequest_1" Method="GET" Resource="https://login.salesforce.com/services/oauth2/Case" Result="[Result]" StatusCode="[Result_Status_Code]">
+                    <usa:LightningRestApiRequest.Headers>
+                      <InArgument x:TypeArguments="x:String" x:Key="Case Number">00001026</InArgument>
+                    </usa:LightningRestApiRequest.Headers>
+                  </usa:LightningRestApiRequest>
+                </Sequence>
+              </ActivityAction>
+            </usa:SalesforceApplicationScope.Body>
+            <usa:SalesforceApplicationScope.DesignSalesforceConnectionInfo>
+              <usm:SalesforceConnectionInfo ConsumerKey="3MVG9n_HvETGhr3DxpMri4kpRPz0yqxEhp_t9sYuClI8RNIOLaX4zXUhGqHmfCwhviDUsV4ya3athn7mCxpoW" EncryptedConsumerSecret="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACUTOT+aTe0KZ2O9hczsczAAAAAACAAAAAAADZgAAwAAAABAAAAB0pys6t5JAKBN1Y2Dtyl6pAAAAAASAAACgAAAAEAAAAPUID0Ac8xS2LLRxMxsiRbBIAAAAEzQCiho765AqyeBLflqpHbL+BCvcJW1c0EyD0ZDwz/Aq/LvU8W81uFNACoy9x+uUUFsTaWoxViPYMm8KeWrnT94Xo9GohTC1FAAAANexSDGuTIWYy4SQAKn+U/uRh4lc" EncryptedSecurityToken="" ServerInstance="Live" UserName="siddhartha.bhosle-najt1@force.com">
+                <usm:SalesforceConnectionInfo.ConsumerSecret>
+                  <ss:SecureString />
+                </usm:SalesforceConnectionInfo.ConsumerSecret>
+                <usm:SalesforceConnectionInfo.Password>
+                  <ss:SecureString />
+                </usm:SalesforceConnectionInfo.Password>
+                <usm:SalesforceConnectionInfo.SecurityToken>
+                  <ss:SecureString />
+                </usm:SalesforceConnectionInfo.SecurityToken>
+              </usm:SalesforceConnectionInfo>
+            </usa:SalesforceApplicationScope.DesignSalesforceConnectionInfo>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </usa:SalesforceApplicationScope>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>
